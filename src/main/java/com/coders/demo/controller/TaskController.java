@@ -17,7 +17,11 @@ import com.coders.demo.model.Task;
 import com.coders.demo.service.TaskService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")  // Allow React
+// Allow React
+@CrossOrigin(origins = {
+	    "http://localhost:5173",
+	    "https://delightful-syrniki-4303c6.netlify.app"
+	}) 
 @RequestMapping("/api/tasks")
 public class TaskController {
 
